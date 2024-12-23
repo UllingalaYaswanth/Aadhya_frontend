@@ -99,7 +99,7 @@ export function SignIn() {
       </div>
       <div className="w-2/5 h-full hidden lg:block">
         <img
-          src="/img/login.jpg"
+          src="/img/login_v1.jpg"
           alt="Pattern"
           className="h-full w-full object-cover rounded-3xl"
         />
