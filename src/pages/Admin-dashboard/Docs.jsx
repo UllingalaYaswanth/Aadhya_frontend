@@ -75,7 +75,7 @@ export function Docs() {
 
   // Function to handle document click (download from Dropbox)
   const handleDocumentClick = async (documentPath) => {
-    const accessToken = 'sl.B5DLTaa-dijAKak0bbej2J5fV8y6d8JcYpgtqNyFu99itN21TmnclV-S8_C626INRE_7g3Hvt9Rp8eNl903KZq0CgCgB6oar4FgL4rYxI3-D2jZ5QKK2r9jjNRRbSQemcT6VK4Fxaz-ZFcMOr5-OU7o'; // Replace with your Dropbox access token
+    const accessToken = 'enteraccesstoken'; // Replace with your Dropbox access token
     const dbx = new Dropbox({ accessToken });
 
     try {

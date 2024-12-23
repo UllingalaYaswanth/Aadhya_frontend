@@ -105,7 +105,7 @@ export function DataSource() {
   };
 
     const handleDropboxUpload = async (file, filePath) => {
-    const accessToken = 'sl.B5EQVBMQx2r6n6E5BdIH6FQ5LqnWZFcYEUFCRZZK6NR2y46DEVamKzxocjMgke15OI_3yy1Olj6lJjzpLzKqfUkqqa2OhI0GU5ChHfPhC5eeH-K7F-os3iCNLBTz6xKLvgmBbnE6TD9WmCSqzJEFVdo'; // Replace with your Dropbox access token
+    const accessToken = 'dropboxtoken'; // Replace with your Dropbox access token
     const dbx = new Dropbox.Dropbox({ accessToken });
 
     try {
