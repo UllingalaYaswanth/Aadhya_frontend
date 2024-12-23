@@ -147,7 +147,7 @@ const MainBody = ({ user, addToHistory, initialMessages, currentMessages, setCur
   }, [messages]);
 
   return (
-    <div className="flex-1 flex flex-col p-4 bg-black relative" >
+    <div className="flex-1 flex flex-col p-4 bg-[#2f2f2f] relative" >
       {/* Header Section */}
       <div className="border-b border-gray-600 pb-2 mb-4 flex items-center justify-between relative">
         <h2 className="text-xl font-semibold text-white ">Aadhya</h2>
@@ -197,8 +197,8 @@ const MainBody = ({ user, addToHistory, initialMessages, currentMessages, setCur
     }`}
     style={{
       background: msg.user === 'user'
-        ? 'linear-gradient(to right, #ff0000, #ff6f20)' // Red to orange for user
-        : 'linear-gradient(to right, #3B82F6, #60A3D9)', // Blue to light blue for others
+        ? 'gray' // Red to orange for user
+        : 'linear-gradient(to right,rgba(59, 131, 246, 0),rgba(96, 163, 217, 0))', // Blue to light blue for others
       alignSelf: msg.user === 'user' ? 'flex-end' : 'flex-start',
       color: 'white',
       padding: '8px', // Decreased padding
@@ -246,7 +246,7 @@ const MainBody = ({ user, addToHistory, initialMessages, currentMessages, setCur
             <div className={`flex flex-wrap gap-4 justify-center items-center max-w-3xl mx-auto p-4`}>
               <h2 className="w-full text-lg text-gray-400 text-center">Frequently Asked Questions:</h2>
               {faqQuestions.map((question, index) => (
-                <div key={index} className="bg-gradient-to-r from-red-500 to-orange-500 rounded-full p-2 shadow flex-shrink-0" >
+                <div key={index} className="bg-gray-700 rounded-full p-2 shadow flex-shrink-0" >
                   <p className="text-white font-medium">{question}</p>
                 </div>
               ))}
@@ -286,7 +286,7 @@ const MainBody = ({ user, addToHistory, initialMessages, currentMessages, setCur
           <FaMicrophone className="w-5 h-5 text-gray-700 cursor-pointer" onClick={handleStartRecording} />
         </div>
         <textarea
-          className="w-full text-white mb-2 p-2 pt-4 resize-none bg-black focus:outline-none pe-24"
+          className="w-full text-white bg-[#2f2f2f] mb-2 p-2 pt-4 resize-none focus:outline-none pe-24"
           placeholder="Type your message here..."
           rows="3"
           value={query}
@@ -305,13 +305,13 @@ const MainBody = ({ user, addToHistory, initialMessages, currentMessages, setCur
 
   <div className="flex items-center justify-end space-x-2 absolute bottom-1 right-5">
     <div
-      className="bg-gradient-to-r from-red-500 to-orange-500 w-10 h-10 flex items-center justify-center  rounded cursor-pointer transition-colors duration-300"
+      className="bg-gray-700 w-10 h-10 flex items-center justify-center  rounded cursor-pointer transition-colors duration-300"
       onClick={handleSaveSession}
     >
       <RectangleStackIcon className="w-6 h-6 text-white" />
     </div>
     <button
-      className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded hover:bg-[#365BB2]"
+      className="bg-gray-700 text-white px-4 py-2 rounded hover:bg-[#365BB2]"
       type="submit"
       onClick={handleSendMessage}
     >

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Input, Button, Typography } from "@material-tailwind/react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from '../../AuthContext'; // Adjust the import path as needed
+import login from '/img/login.jpg'
 
 export function SignIn() {
   const navigate = useNavigate();
@@ -56,7 +57,7 @@ export function SignIn() {
 
   return (
     <section className="m-8 flex gap-4">
-      <div className="w-full lg:w-3/5 mt-24">
+      <div className="w-full lg:w-3/5 mt-60">
         <div className="text-center">
           <Typography variant="h2" className="font-bold mb-4">Sign In</Typography>
         </div>
@@ -98,7 +99,7 @@ export function SignIn() {
       </div>
       <div className="w-2/5 h-full hidden lg:block">
         <img
-          src="/img/pattern.png"
+          src="/img/login.jpg"
           alt="Pattern"
           className="h-full w-full object-cover rounded-3xl"
         />

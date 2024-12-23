@@ -23,9 +23,10 @@ const Sidebar = ({ history, user, loadChat, handleNewChat, handleRename, handleD
         navigate("/");  // Ensure you navigate to the login route
       } else {
         console.error('Failed to log out:', response.data.error);
-      }
+      } 
     } catch (error) {
       console.error('Error logging out:', error);
+      navigate("/"); 
     }
   };
 
@@ -34,18 +35,16 @@ const Sidebar = ({ history, user, loadChat, handleNewChat, handleRename, handleD
       <div className="flex mt-3  items-center space-x-4 justify-between">
         {/* <img src={user.image} alt="Logo" className="w-12 h-12 mb-3 ps-1 rounded" />
         <h2 className="text-xl font-semibold text-white">Hello! {`${user.name}`}</h2> */}
-<div className="flex items-center justify-center">
-  <img
-    src={profileImage}
-    alt="Profile"
-    className="w-14 h-13 mb-3 ps-1 rounded-full"
-  />
-  <h2 className="text-xl font-semibold text-white ml-3">
-    Sruthi {`${user.name}`}
-  </h2>
-</div>
-
-
+        <div className="flex items-center justify-center">
+          <img
+            src={profileImage}
+            alt="Profile"
+            className="w-14 h-13 mb-3 ps-1 rounded-full"
+          />
+          <h2 className="text-xl font-semibold text-white ml-3">
+            Sruthi {`${user.name}`}
+          </h2>
+        </div>
         <button onClick={handleNewChat} className="focus:outline-none">
           <SquaresPlusIcon className="h-6 w-6 text-gray-600 text-hover-white" />
         </button>
@@ -79,7 +78,7 @@ const Sidebar = ({ history, user, loadChat, handleNewChat, handleRename, handleD
       <div className="m-2 ">
         <Button
        
-          className="flex items-center gap-4 px-10 capitalize bg-gradient-to-r from-red-500 to-orange-500  opacity-80"
+          className="flex items-center gap-4 px-10 capitalize bg-gray-700  opacity-80 hover:bg-gray-600"
           fullWidth
           onClick={handleLogout}
         >
