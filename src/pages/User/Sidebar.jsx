@@ -35,14 +35,14 @@ const Sidebar = ({ history, user, loadChat, handleNewChat, handleRename, handleD
       <div className="flex mt-3  items-center space-x-4 justify-between">
         {/* <img src={user.image} alt="Logo" className="w-12 h-12 mb-3 ps-1 rounded" />
         <h2 className="text-xl font-semibold text-white">Hello! {`${user.name}`}</h2> */}
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center px-1">
           <img
             src={profileImage}
             alt="Profile"
-            className="w-14 h-13 mb-3 ps-1 rounded-full"
+            className="w-12 h-13 rounded-full"
           />
           <h2 className="text-xl font-semibold text-white ml-3">
-            Sruthi {`${user.name}`}
+            Hello! User 1{`${user.name}`}
           </h2>
         </div>
         <button onClick={handleNewChat} className="focus:outline-none">

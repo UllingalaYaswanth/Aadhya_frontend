@@ -247,7 +247,7 @@ const MainBody = ({ user, addToHistory, initialMessages, currentMessages, setCur
               <h2 className="w-full text-lg text-gray-400 text-center">Frequently Asked Questions:</h2>
               {faqQuestions.map((question, index) => (
                 <div key={index} className="bg-gray-700 rounded-full p-2 shadow flex-shrink-0" >
-                  <p className="text-white font-medium">{question}</p>
+                  <p className="text-white font-medium cursor-pointer">{question}</p>
                 </div>
               ))}
             </div>
